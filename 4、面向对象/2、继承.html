@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /* function User(name, pass) {
+                    this.name = name;
+                    this.pass = pass;
+            }
+            User.prototype.showName = function() {
+                    alert(this.name);
+            } 
+            User.prototype.showPass = function() {
+                    alert(this.pass);
+            }*/
+
+        // function VipUser(name, pass, level) {
+        // 	User.call(this, name, pass);
+        // }
+
+        // VipUser.prototype = new User();
+        // VipUser.prototype.constructor = VipUser;
+
+        // VipUser.prototype.showLevel = function() {
+        // 	alert(this.level);
+        // }
+
+        class User {
+            constructor(name, pass) {
+                this.name = name;
+                this.pass = pass;
+            }
+            showName() {
+                alert(this.name);
+            }
+            showPass() {
+                alert(this.pass);
+            }
+        }
+        class VipUser extends User {
+            constructor(name, pass, level) {
+                super(name, pass);
+            }
+        }
+
+        var v1 = new VipUser('blue', '44872', 3);
+        v1.showName();
+        v1.showPass();
+        v1.showLevel();
+    </script>
+</body>
+
+</html>

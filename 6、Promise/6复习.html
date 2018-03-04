@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        Promise.all([
+            $.ajax({url: 'data/arrr.txt', dataType: 'json'}),
+            $.ajax({url: 'data/json.txt', dataType: 'json'}),
+            $.ajax({url: 'data/hi.txt', dataType: 'json'}),
+            $.ajax({url: 'data/wa.txt', dataType: 'json'})
+            
+        ]).then(results => {
+            let [arrr, json, hi, num] = results;
+            alert('成功');
+        }, err => {
+            alert('失败');
+        });
+    </script>
+</body>
+</html>

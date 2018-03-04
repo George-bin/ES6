@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+        /*function User(name, pass) {
+        	this.name = name;
+        	this.pass = pass;
+        }
+        User.prototype.showName = function() {
+        	alert(this.name);
+        } 
+        User.prototype.showPass = function() {
+        	alert(this.pass);
+        }
+        */
+
+		class User {    //类
+			constructor(name, pass) {   //构造器
+				this.name = name;
+				this.pass = pass;
+			}
+			showName() {
+				alert(this.name);
+			}
+			showPass() {
+				alert(this.pass);
+			}
+		}
+		var u1 = new User('blue', '4745451');
+
+		u1.showName();
+		u1.showPass();
+
+	</script>
+</body>
+
+</html>
